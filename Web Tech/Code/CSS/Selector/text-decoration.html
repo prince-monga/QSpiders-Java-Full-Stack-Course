@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ #hello{
+            background-color: rgb(75, 75, 167);
+            color: aliceblue;
+            padding: 20px;
+            text-align: center;
+            /* text-decoration-line: underline;
+            
+            text-decoration-thickness: 3px;
+            text-decoration-color: chartreuse;
+            text-decoration-style: wavy; 
+            line-style-thinkness-color
+            */
+            text-decoration:underline  dotted  2px chartreuse;
+        }
+        p{
+            text-indent: 100px;
+            word-spacing: 12px;
+            letter-spacing: 4px;
+            word-wrap: wrap;
+        }
+        .conatiner1{
+            height: 200px;
+            width: 200px;
+            border: 2px dotted;
+            background-color: aqua;
+            /* background: linear-gradient(TO right, rgb(219, 97, 213),rgb(255, 187, 0),rgb(26, 191, 86),rgb(0, 124, 128)); */
+     
+            background:  linear-gradient(TO bottom left, red ,green, yellow, blue);
+        }
+         .conatiner2{
+            height: 200px;
+            width: 200px;
+            border: 2px dotted;
+          /*background: radial-gradient(red green blue black  grey); */
+        /*  background: conic-gradient(red, yellow, green, blue, red); */
+        background: conic-gradient(red 0deg 45deg, yellow 45deg 90deg, green 90deg 120deg, blue 120deg 230deg, red 230deg 360deg);
+          
+         }
+          .conatiner3{
+            height: 200px;
+            width: 200px;
+            border: 2px dotted;
+            background: radial-gradient( red, yellow, green, blue, black);
+          
+          
+         }
+         p {
+ 
+    width: 300px; /* Set a width to see the effect */
+    
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+    </style>
+</head>
+<body>
+    <h1 id="hello" >heading</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ut laboriosam quisquam commodi minus rem porro nihil recusandae nostrum exercitationem? Cupiditate ipsa sunt quidem, minus deserunt expedita nam aut dicta.</p>
+    <section class="conatiner1">
+ <h2>Linear color  TO bottom left</h2>
+    </section>
+    <section class="conatiner2">
+        <h3>Conic color background</h3>
+    </section>
+    <p> This is an example of a long text that will be truncated with an ellipsis if it exceeds the width of the container.</p>
+
+    <section class="conatiner3">
+         <h3>radial-gradient color background</h3>
+        </section>
+</body>
+</html>

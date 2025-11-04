@@ -1,0 +1,19 @@
+.container[title="abc"]{
+ color: green;
+}
+#head:hover{
+    color: rgb(255, 166, 0);
+}
+a:link{
+    color: rgb(255, 0, 0);
+}
+
+a:hover{
+    color: rgb(255, 200, 0);
+}
+a.visited{
+    color: rgb(125, 247, 43);
+}
+a:active{
+    color: rgb(32, 222, 200);
+}

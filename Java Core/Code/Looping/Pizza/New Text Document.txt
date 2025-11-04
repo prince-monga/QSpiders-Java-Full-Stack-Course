@@ -1,0 +1,126 @@
+import java.util.Scanner;
+class Pizza{
+	public static void main(String[] args){
+	System.out.println("Welcome to Dominus Pizza");
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter 1 for GGN");
+	System.out.println("Enter 2 for Noida");
+	System.out.println("Enter 3 for Delhi ");
+	int city=sc.nextInt();
+	
+	swtich(city){
+		case 1:{
+			System.out.println("Welcome to GGN Pizza \n");
+			System.out.println("Enter 1 veg Pizza");
+			System.out.println("Enter 2 Non-Veg Pizza");
+			int nv=sc.nextInt();
+
+			if(nv==1){
+				System.out.println("You Select veg Pizza-");
+				System.out.println("Enter 1 Onino Pizza");
+				System.out.println("Enter 2 for Corn Pizza");
+				System.out.println("Enter 3 for Masrum Pizza ");
+				int select_pizza=sc.nextInt();
+				swtich(select_pizza){
+				case 1:{
+					System.out.println("You Selected Onino Pizza");
+				}
+				break;
+				case 2:{
+					System.out.println("You Selected Corn Pizza");
+				}
+				break;
+				case 3:{
+					System.out.println("You Selected Massrum Pizza");
+				}
+				break;
+				}
+					
+			}
+			if(nv==2){
+				System.out.println("You Select Non veg Pizza-");
+				System.out.println("Enter 1 non veg Pizza");
+				System.out.println("Enter 2  Meat tandoori Pizza");
+				System.out.println("Enter 3 for Masrom Pizza ");
+				int select_pizza=sc.nextInt();
+				swtich(select_pizza){
+				case 1:{
+					System.out.println("You Selected non veg  Pizza");
+				}
+				break;
+				case 2:{
+					System.out.println("You Selected Meat tandorri Pizza");
+				}
+				break;
+				case 3:{
+					System.out.println("You Selected Masrom Pizza");
+				}
+				break;
+				}
+					
+			}
+		}
+		break;
+		case 2:{
+			System.out.println("Welcome to GGN Pizza \n");
+			System.out.println("Enter 1 veg Pizza");
+			System.out.println("Enter 2 Non-Veg Pizza");
+			int nv=sc.nextInt();
+
+			if(nv==1){
+				System.out.println("You Select veg Pizza-");
+				System.out.println("Enter 1 Onino Pizza");
+				System.out.println("Enter 2 for Corn Pizza");
+				System.out.println("Enter 3 for Masrum Pizza ");
+				int select_pizza=sc.nextInt();
+				swtich(select_pizza){
+				case 1:{
+					System.out.println("You Selected Onino Pizza");
+				}
+				break;
+				case 2:{
+					System.out.println("You Selected Corn Pizza");
+				}
+				break;
+				case 3:{
+					System.out.println("You Selected Massrum Pizza");
+				}
+				break;
+				}
+					
+			}
+			if(nv==2){
+				System.out.println("You Select Non veg Pizza-");
+				System.out.println("Enter 1 non veg Pizza");
+				System.out.println("Enter 2  Meat tandoori Pizza");
+				System.out.println("Enter 3 for Masrom Pizza ");
+				int select_pizza=sc.nextInt();
+				swtich(select_pizza){
+				case 1:{
+					System.out.println("You Selected non veg  Pizza");
+				}
+				break;
+				case 2:{
+					System.out.println("You Selected Meat tandorri Pizza");
+				}
+				break;
+				case 3:{
+					System.out.println("You Selected Masrom Pizza");
+				}
+				break;
+				}
+					
+			}
+		}
+		break;
+		
+		
+
+		
+	}
+	
+	
+	}
+	  
+
+}

@@ -1,0 +1,16 @@
+ol p:first-child{
+color: brown;
+}
+ol li:last-child{
+    color: blueviolet;
+}
+ol li:first-of-type{
+    color: rgb(46, 209, 214);
+}
+ol li:last-of-type{
+    color: yellow;
+}
+ol li:nth-child(4){
+    color: chocolate;
+}
+/*kjxk*/

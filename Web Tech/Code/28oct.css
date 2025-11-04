@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.chatBot{
+    height: 50px;
+    width: 50px;
+    border: 1px solid;
+    background-color: aqua;
+    border-radius: 40%;
+    padding: 10px;
+    right: 10px;
+    bottom: 20px;
+    position: fixed;
+}
+
+nav{
+    height: 50px;
+    width: 100%;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+
+}
+div{
+    height: 30px;
+    width: 100%;
+    border: 1px solid;
+    background-color: aqua;
+   
+}

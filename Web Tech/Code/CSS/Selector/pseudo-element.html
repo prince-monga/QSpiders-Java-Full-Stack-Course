@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-line{
+            background-color: aqua;
+        }
+        p::first-letter{
+            font-size: 45px;
+            background-color: rgb(255, 0, 238);
+        }
+        p::before{
+            content: "😒";
+        }
+        p::after{
+            content: "😁";
+        }
+        p::selection{
+            background-color: rgb(100, 237, 146);
+            color: rgb(241, 230, 116);
+        }                                                    
+       ol li:nth-of-type(even)::marker{
+        content: "❌";
+       }
+       ol li:nth-of-type(odd)::marker{
+        content: "✅";
+       }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolorum rerum, commodi iusto perfe
+        rendis iste, provident totam ipsum nemo ducimus modi ne
+        cessitatibus asperiores odit ullam accusantium aut, 
+        obcaecati debitis id.</p>      
+        <ol>
+            <li>Jammmu</li>
+            <li>Sirsa</li>
+            <li>grurugram</li>
+            <li>noida</li>
+            <li>Kishtwar</li>
+            <li>Poonch</li>
+        </ol>
+</body>
+</html>

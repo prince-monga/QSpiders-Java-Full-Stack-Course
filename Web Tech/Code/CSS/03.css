@@ -1,0 +1,36 @@
+.container{
+    
+    border: 1px solid tan ;
+    border-radius: 22px;
+    width: 250px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    background:conic-gradient(rgb(238, 206, 206), rgb(253, 253, 253));
+}
+
+.btn{
+   
+    display: flex;
+}
+button{
+    border-radius: 10px;
+    padding: 8px;
+    margin: 30px;
+
+}
+
+#up{
+    background-color: rgb(244, 250, 241);
+} 
+#up:hover{
+    background-color: rgb(208, 246, 133);
+    cursor: pointer;
+}
+#del{
+    background-color: rgb(232, 146, 146);
+}
+#del:hover{
+    background-color: rgb(236, 99, 99);
+    cursor: pointer;
+}

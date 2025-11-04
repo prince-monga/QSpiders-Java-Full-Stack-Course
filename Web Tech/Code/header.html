@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .navBar{
+            height: 15vh;
+            width: 100%;
+            box-shadow: 0px 2px 2px rgb(197, 195, 195);
+            padding: 0px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navBar .logo{
+            height: 100%;
+            width: 12%;
+             box-shadow: 1px 2px 2px rgb(218, 216, 216);
+            cursor: pointer;
+        }
+          .navBar .logo img{
+            height: 100%;
+            width: 100%;
+       
+        }
+        .navBar .searchBar{
+            height: 50%;
+            width: 35%;
+              border: 1px solid grey; 
+             border-radius: 8px;
+                display: flex;
+                align-items: center;
+                padding: 0px 10px;
+
+        }
+        .navBar .searchBar input{
+            height: 80%;
+            width: 90%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    
+        .navBar button{
+            height: 40%;
+            width: 8%;
+            border: none;
+            background-color: #ffffff;
+            color: rgb(35, 35, 35);
+            font-size:18px;
+            cursor: pointer;
+        }
+        .navBar .cartSec{
+            display: flex; 
+       
+            align-items: center;
+            background-color: #d4d0d0;
+            color: rgb(238, 238, 238);
+            padding: 5px 10px;
+            border-radius: 5px;
+            
+        }
+        .navBar .cartSec i{
+            font-size: 24px;
+        }
+        .navBar .cartSec button{
+            text-align: center;
+            height: 40%;
+            width: 30%;
+            border: none;
+            background-color: #d4d0d0;
+            color: rgb(242, 242, 242);
+            cursor:no-drop;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="./OIP.jpg" alt="">
+        </div>
+        <div class="location">
+            <h3>Deliver in 12 Minutes</h3>
+            <p>Gurugram,haryana,India</p>
+        </div>
+        <div class="searchBar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text">
+
+        </div>
+        <button>Login</button>
+        <div class="cartSec">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <button>My Cart</button>
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,26 @@
+class typecastingint
+{
+	public static void main(String[] args){
+
+	 //byte<short<int<long<float<double
+
+	
+	//3. Convert int into long,float,double
+	System.out.println("\n int into long,float,double \n");
+	
+	int i3=567;
+	long l3=i3;
+	float f3=i3;
+	double d3=i3;
+
+	System.out.println("Int value:"+i3);
+	System.out.println("Long value:"+l3);
+	System.out.println("Float value:"+f3);
+	System.out.println("Double value:"+d3);	
+	
+
+	
+	
+	
+	}
+}

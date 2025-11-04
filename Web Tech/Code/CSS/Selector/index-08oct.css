@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100px;
+    width: 100px;
+    border: 1px solid;
+}
+input[name="email"]:focus{
+    background-color: brown;
+    color: #ffffff;
+}
+input[name="password"]:focus{
+    background-color: rgb(255, 251, 0);
+    color: #ee1919;
+}
+input[name="gender"]:focus{
+    background-color: aqua;
+}
+input[type="checkbox"]:focus{
+    background-color: aqua;
+}
