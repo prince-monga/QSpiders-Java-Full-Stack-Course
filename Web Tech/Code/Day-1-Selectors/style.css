@@ -1,0 +1,7 @@
+ul p{
+    color: aqua ;
+}
+p::first-letter{
+    font-size: 18px;
+    color: rgb(255, 25, 0);
+}

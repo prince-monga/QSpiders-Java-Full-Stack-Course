@@ -1,0 +1,12 @@
+Desendent Selector " "
+-taget all p(inculding nested also)
+
+child Selector ">"
+-Target all direct p tag (excluding nested p)
+
+imediate Sibling Selector "+"
+-Target the first child only
+
+General Sibling Selector "~"
+-target all the p tag (in the same level), {excluding nested}
+

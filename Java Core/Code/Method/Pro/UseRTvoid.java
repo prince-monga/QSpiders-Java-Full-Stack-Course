@@ -45,11 +45,24 @@ class UseRTvoid{
 
 	public static void main(String[] args){
 		System.out.print("Run succefully!");
+		//Call directly Void method 
 			method1();
 			method2();
 			method3();
 			method4();
 			method5();
+
+		
+
+		//----1---Methods with void return type do not return any value.
+
+		//----2----So you cannot assign their result to a variable.
+
+		//Store in a varible
+		//UseRTvoid v1=method1(); ---unexpected type — required: value, found: void
+		//System.out.print(v1);
+
+		//Call Non static method using object refernce
 		UseRTvoid u=new UseRTvoid();
 			u.method6();
 			u.method7();
