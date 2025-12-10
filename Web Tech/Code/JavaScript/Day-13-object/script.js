@@ -128,3 +128,48 @@ console.log(Object.entries(objMeth)) //entries
 //Returns a new object whose properties are given by the entries of the iterable object.
 let arr=[["id",1],["name","abc"],["age",15]]
 console.log(Object.fromEntries(arr)) //object
+
+// object freeze():- It is used to freeze an object. A frozen object can no longer be modified: new properties cannot be added, existing properties cannot be removed or changed.
+//example
+let objFreeze={
+    id:1,
+    name:"abc"  
+}
+Object.freeze(objFreeze)  //freeze the object
+objFreeze.id=2 //cannot change
+objFreeze.city="xyz" //cannot add
+delete objFreeze.name //cannot delete
+console.log(objFreeze)
+
+
+// object.frozen() :- It is used to check if an object is frozen or not. It returns true if the object is frozen, otherwise false.
+console.log(Object.isFrozen(objFreeze)) //true
+console.log(Object.isFrozen(objMeth)) //false
+
+// object.seal():- It is used to seal an object. A sealed object can no longer be modified: new properties cannot be added, existing properties cannot be removed, but the values of existing properties can still be changed.
+let objSeal={
+    id:1,
+    name:"abc"
+}
+Object.seal(objSeal) //seal the object
+objSeal.id=2 //can change
+objSeal.city="xyz" //! cannot add
+delete objSeal.name //! cannot delete
+console.log(objSeal)
+
+// object.isSealed():- It is used to check if an object is sealed or not. It returns true if the object is sealed, otherwise false.
+console.log(Object.isSealed(objSeal)) //true
+console.log(Object.isSealed(objMeth)) //false
+
+//!Object.assign(target,source): copy the values of all of the emuerable own properties from one or more 
+//! source object to a target object, returns the target object.
+
+
+let objz={
+    id:1,
+    name:"abc"
+}
+console.log(objz)
+let arr77=Object.assign({},objz) //copying the values of objz to a new object
+console.log(arr77) //new object with copied values
+
