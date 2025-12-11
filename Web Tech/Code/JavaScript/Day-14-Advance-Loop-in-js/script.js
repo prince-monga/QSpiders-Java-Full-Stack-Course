@@ -47,7 +47,9 @@
 // }
 
 
-//! forEach()
+//! forEach():- It is used to iterate over arrays only.
+// - It executes a provided function once for each array element.
+// - It takes three arguments: currentValue, index, array
 // let arr=["A","B","C","D","E"]
 
 // arr.forEach((val,index,element)=>{
@@ -134,3 +136,30 @@ function funRest({id,name,...rest}){
 funRest(objRest) //1 "prince" {age: 15, skills: Array(3), city: "xyz", sal: 12345}
 // - Here ...rest is used to collect the remaining properties of the object into a new object.
 //! spread operator in object destructuring
+
+
+
+
+
+
+//~truthy and falsy values in js
+// - In JavaScript, truthy and falsy values are used to determine the boolean value of an expression in a boolean context, such as in conditional statements.
+// - A truthy value is a value that is considered true when evaluated in a boolean context, while a falsy value is a value that is considered false.
+// - The following values are considered falsy in JavaScript:
+//! 1. false
+//! 2. 0 (zero)
+//! 3. "" (empty string)
+//! 4. null
+//! 5. undefined
+//! 6. NaN (Not a Number)
+//! 7. -0,
+//! 8. 0n (BigInt zero)
+
+// - All other values are considered truthy, including:
+// 1. true
+// 2. Non-zero numbers (e.g., 1, -1, 3.14)
+// 3. Non-empty strings (e.g., "hello", "0")
+// 4. Objects (e.g., {}, [])
+// 5. Functions
+// - Understanding truthy and falsy values is important for writing effective conditional statements and controlling the flow of your code.
+
