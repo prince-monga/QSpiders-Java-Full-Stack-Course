@@ -82,9 +82,9 @@ console.log(deepCopy.age)
 // - Common methods for creating shallow copies include Object.assign() and the spread operator (...), while common methods for creating deep copies include JSON.parse(JSON.stringify()) and structuredClone().
 
 //!Shallow Copy and Deep Copy Summary Table:
-//| Aspect               | Shallow Copy                          | Deep Copy                             |
+//| Aspect               | Shallow Copy                         | Deep Copy                             |
 //|----------------------|--------------------------------------|---------------------------------------|
-//| Definition           | Creates a new object with references | Creates a completely independent     |
+//| Definition           | Creates a new object with references | Creates a completely independent      |
 //|                      | to nested objects                    | copy of the original object           |
 //| Nested Objects       | Shares references to nested objects  | Copies all nested objects             |
 //| Performance          | Faster and uses less memory          | Slower and uses more memory           |

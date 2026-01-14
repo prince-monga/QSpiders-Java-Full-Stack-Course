@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+    <div id="d1">
+        <div id="d2">
+            <div id="d3">
+               
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const divElements = document.querySelectorAll('div');
+    divElements.forEach(div => {
+        div.style.display = 'flex';
+        div.style.justifyContent = 'center';
+        div.style.alignItems = 'center';
+        div.style.border = '2px solid black';
+        div.style.padding = '10px';
+        div.style.margin = '10px';
+        div.style.height = '70%';
+        div.style.width = '70%';
+        div.style.borderRadius = '12px';
+    });
+
+    const section = document.querySelector('section');
+    section.style.display = 'flex';
+    section.style.justifyContent = 'center';
+    section.style.alignItems = 'center';
+    section.style.height = '100vh';
+
+    const d1 = document.getElementById('d1');
+    const d2 = document.getElementById('d2');
+    const d3 = document.getElementById('d3');
+
+    d1.style.backgroundColor = 'rgb(242, 8, 8)';
+    d2.style.backgroundColor = 'rgb(250, 224, 57)';
+    d3.style.backgroundColor = 'rgb(128, 240, 232)';
+</script>
+</body>
+
+</html>
