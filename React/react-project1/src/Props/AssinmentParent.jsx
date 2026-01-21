@@ -177,7 +177,7 @@ export const AssinmentParent = () => {
   return (
     <Fragment>
     <h1>Assinment Parent</h1>
-    <AssinmentChild users={users}/>
+    <AssinmentChild users={users} />
     </Fragment>
   )
 }
