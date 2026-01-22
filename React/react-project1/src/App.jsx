@@ -12,8 +12,11 @@ import DefaultParent from "./Props/DefaultProps/DefaultParent";
 import ContextParent from './ContextAPI/ContextParent'
 import Con2Parent from './ContextAPI/Con2API/Con2Parent'
 import ContextGrandparent from './ContextAPI/Con3API/ContextGrandparent'
-
+import LifeCycleCbc from './lifeCycle/LifeCycleCbc'
+import { useState } from 'react'
 const App = () => {
+
+  let  [toggle, setToggle] = useState(true)
   return (
     <div>
       {/* <h1>React krle bhai yha kya dekh rha</h1>
@@ -35,7 +38,10 @@ const App = () => {
 
 {/* 
      <Con2Parent/> */}
-     <ContextGrandparent/>
+     {/* <ContextGrandparent/> */}
+  {toggle ? <LifeCycleCbc/> :"Component remove"}
+  <br></br>
+  <button onClick={()=>setToggle(!toggle)}>Toggle Component</button>
     </div>
   )
 }

@@ -22,7 +22,7 @@ public class Find {
 		
 		if(person!=null) {
 			System.out.println(person.getName());
-			person.setName("Sineshhhh");
+			person.setName("prbbkr ");
 			
 			entityTransaction.begin();
 			entityManager.merge(person);

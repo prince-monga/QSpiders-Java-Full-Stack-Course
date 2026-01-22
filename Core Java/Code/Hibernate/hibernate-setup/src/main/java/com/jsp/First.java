@@ -12,7 +12,7 @@ public class First {
 		//Conneect the Java Application to DataBase---  it check Persistence "java" matches with the persistence.xml inside persistence- unit name is matched or not
 		
 		System.out.println(entityManagerFactory);
-		
+		//-----
 		
 		//
 		EntityManager entityManager= entityManagerFactory.createEntityManager();
