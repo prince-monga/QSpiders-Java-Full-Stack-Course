@@ -1,0 +1,621 @@
+SQL> SELECT * FORM EMP;
+SELECT * FORM EMP
+         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  SELECT * 
+  2* FROM EMP
+SQL> /
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                                                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                                                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                                                                   
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                                                                   
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                                                                   
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                                                                   
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                                                                   
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                                                                   
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                                                                   
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                                                                   
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                                                                   
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                                                                   
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                                                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                                                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                                                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                                                                                                   
+
+14 rows selected.
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  SELECT * 
+  2* FROM DEPT
+SQL> /
+
+    DEPTNO DNAME          LOC                                                                                                                                                                           
+---------- -------------- -------------                                                                                                                                                                 
+        10 ACCOUNTING     NEW YORK                                                                                                                                                                      
+        20 RESEARCH       DALLAS                                                                                                                                                                        
+        30 SALES          CHICAGO                                                                                                                                                                       
+        40 OPERATIONS     BOSTON                                                                                                                                                                        
+
+SQL> SELECT *
+  2  FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID                                                                                                                                                       
+------------------------------ ------- ----------                                                                                                                                                       
+DEPT                           TABLE                                                                                                                                                                    
+EMP                            TABLE                                                                                                                                                                    
+BONUS                          TABLE                                                                                                                                                                    
+SALGRADE                       TABLE                                                                                                                                                                    
+
+SQL> CREATE TABLE GIRLS
+  2  (
+  3  GID NUMBER(4) CHECK(GID>0) CHECK(LENGTH(GID)=4) PRIMARY KEY,
+  4  GNAME VARCHAR(20),
+  5  DOB DATE,
+  6  PHONE_NO NUMBER(10) CHECK(PHONE_NO>0) CHECK(LENGTH(PHONE_NO)=10)
+  7  );
+
+Table created.
+
+SQL> SELECT *
+  2  FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID                                                                                                                                                       
+------------------------------ ------- ----------                                                                                                                                                       
+DEPT                           TABLE                                                                                                                                                                    
+EMP                            TABLE                                                                                                                                                                    
+BONUS                          TABLE                                                                                                                                                                    
+SALGRADE                       TABLE                                                                                                                                                                    
+GIRLS                          TABLE                                                                                                                                                                    
+
+SQL> RENAME GIRLS TO GIRL;
+
+Table renamed.
+
+SQL> SELECT *
+  2  FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID                                                                                                                                                       
+------------------------------ ------- ----------                                                                                                                                                       
+DEPT                           TABLE                                                                                                                                                                    
+EMP                            TABLE                                                                                                                                                                    
+BONUS                          TABLE                                                                                                                                                                    
+SALGRADE                       TABLE                                                                                                                                                                    
+GIRL                           TABLE                                                                                                                                                                    
+
+SQL> ALTER TABLE GIRL
+  2  ADD EMAIL VARCHAR(20) UNIQUE;
+
+Table altered.
+
+SQL> DESC GIRL;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ GID                                                                                                               NOT NULL NUMBER(4)
+ GNAME                                                                                                                      VARCHAR2(20)
+ DOB                                                                                                                        DATE
+ PHONE_NO                                                                                                                   NUMBER(10)
+ EMAIL                                                                                                                      VARCHAR2(20)
+
+SQL> ALTER TABLE GIRL
+  2  RENAME COLUMN EMAIL TO MAIL_ID;
+
+Table altered.
+
+SQL> DESC GIRL;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ GID                                                                                                               NOT NULL NUMBER(4)
+ GNAME                                                                                                                      VARCHAR2(20)
+ DOB                                                                                                                        DATE
+ PHONE_NO                                                                                                                   NUMBER(10)
+ MAIL_ID                                                                                                                    VARCHAR2(20)
+
+SQL> ALTER TABLE GIRL
+  2  MODIFY MAIL_ID VARCHAR(30);
+
+Table altered.
+
+SQL> DESC GIRL;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ GID                                                                                                               NOT NULL NUMBER(4)
+ GNAME                                                                                                                      VARCHAR2(20)
+ DOB                                                                                                                        DATE
+ PHONE_NO                                                                                                                   NUMBER(10)
+ MAIL_ID                                                                                                                    VARCHAR2(30)
+
+SQL>  ALTER TABLE GIRL
+  2  
+SQL> ED
+Wrote file afiedt.buf
+
+  1   ALTER TABLE GIRL
+  2* MODIFY MAIL_ID NOT NULL
+SQL> /
+
+Table altered.
+
+SQL> DESC GIRL;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ GID                                                                                                               NOT NULL NUMBER(4)
+ GNAME                                                                                                                      VARCHAR2(20)
+ DOB                                                                                                                        DATE
+ PHONE_NO                                                                                                                   NUMBER(10)
+ MAIL_ID                                                                                                           NOT NULL VARCHAR2(30)
+
+SQL> ALTER TABLE GIRL
+  2  DROP COLUMN MAIL_ID;
+
+Table altered.
+
+SQL> DESC GIRL;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ GID                                                                                                               NOT NULL NUMBER(4)
+ GNAME                                                                                                                      VARCHAR2(20)
+ DOB                                                                                                                        DATE
+ PHONE_NO                                                                                                                   NUMBER(10)
+
+SQL> ALTER TABLE GIRL
+  2  ADD CONSTRAINT UK_PHONE_NO UNIQUE(PHONE_NO);
+
+Table altered.
+
+SQL> DESC GIRL;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ GID                                                                                                               NOT NULL NUMBER(4)
+ GNAME                                                                                                                      VARCHAR2(20)
+ DOB                                                                                                                        DATE
+ PHONE_NO                                                                                                                   NUMBER(10)
+
+SQL> SELECT CONSTRAINT_NAME,CONSTRAINT_TYPE
+  2  FROM USER_CONSTRAINTS
+  3  WHERE TABLE_NAME='GIRL';
+
+CONSTRAINT_NAME                C                                                                                                                                                                        
+------------------------------ -                                                                                                                                                                        
+SYS_C005557                    C                                                                                                                                                                        
+SYS_C005558                    C                                                                                                                                                                        
+SYS_C005559                    C                                                                                                                                                                        
+SYS_C005560                    C                                                                                                                                                                        
+SYS_C005561                    P                                                                                                                                                                        
+UK_PHONE_NO                    U                                                                                                                                                                        
+
+6 rows selected.
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  SELECT CONSTRAINT_NAME,CONSTRAINT_TYPE
+  2  FROM USER_CONSTRAINTS
+  3* WHERE TABLE_NAME='GIRL'
+SQL> /
+
+CONSTRAINT_NAME                C                                                                                                                                                                        
+------------------------------ -                                                                                                                                                                        
+SYS_C005557                    C                                                                                                                                                                        
+SYS_C005558                    C                                                                                                                                                                        
+SYS_C005559                    C                                                                                                                                                                        
+SYS_C005560                    C                                                                                                                                                                        
+SYS_C005561                    P                                                                                                                                                                        
+UK_PHONE_NO                    U                                                                                                                                                                        
+
+6 rows selected.
+
+SQL> ALTER TABLE GIRL
+  2  DROP CONSTRAINT UK_PHONE_NO;
+
+Table altered.
+
+SQL> DESC GIRL;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ GID                                                                                                               NOT NULL NUMBER(4)
+ GNAME                                                                                                                      VARCHAR2(20)
+ DOB                                                                                                                        DATE
+ PHONE_NO                                                                                                                   NUMBER(10)
+
+SQL> CREATE TABLE MAKEUP
+  2  (
+  3  MID NUMBER(3) PRIMARY KEY,
+  4  MNAME CACHAR(20),
+  5  PRICE NUMBER(3)
+  6  );
+MNAME CACHAR(20),
+            *
+ERROR at line 4:
+ORA-00907: missing right parenthesis 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  CREATE TABLE MAKEUP
+  2  (
+  3  MID NUMBER(3) PRIMARY KEY,
+  4  MNAME VARCHAR(20),
+  5  PRICE NUMBER(3)
+  6* )
+SQL> /
+
+Table created.
+
+SQL> ALTER TABLE MAKEUP
+  2  ADD GID NUMBER(4);
+
+Table altered.
+
+SQL> ALTER TABLE MAKEUP
+  2  ADD CONSTRAINT FK_GIRL_ID FOEGIN KEY(GID) REFERERNCES GIRL(GID);
+ADD CONSTRAINT FK_GIRL_ID FOEGIN KEY(GID) REFERERNCES GIRL(GID)
+                                     *
+ERROR at line 2:
+ORA-01735: invalid ALTER TABLE option 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  ALTER TABLE MAKEUP
+  2* ADD CONSTRAINT FK_GIRL_ID FOEGIN KEY(MAKEUP.GID) REFERERNCES GIRL(GID)
+SQL> /
+ADD CONSTRAINT FK_GIRL_ID FOEGIN KEY(MAKEUP.GID) REFERERNCES GIRL(GID)
+                                     *
+ERROR at line 2:
+ORA-01735: invalid ALTER TABLE option 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  ALTER TABLE MAKEUP
+  2* ADD CONSTRAINT FK_GIRL_ID FOEGIN KEY(GID) REFERERNCES GIRL(GID)
+SQL> /
+ADD CONSTRAINT FK_GIRL_ID FOEGIN KEY(GID) REFERERNCES GIRL(GID)
+                                     *
+ERROR at line 2:
+ORA-01735: invalid ALTER TABLE option 
+
+
+SQL> ALTER TABLE MAKEUP
+  2  RENAME COLUMN GID GIRL_ID;
+RENAME COLUMN GID GIRL_ID
+                  *
+ERROR at line 2:
+ORA-00946: missing TO keyword 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  ALTER TABLE MAKEUP
+  2* RENAME COLUMN GID TO GIRL_ID
+SQL> /
+
+Table altered.
+
+SQL> DESC MAKEUP;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MID                                                                                                               NOT NULL NUMBER(3)
+ MNAME                                                                                                                      VARCHAR2(20)
+ PRICE                                                                                                                      NUMBER(3)
+ GIRL_ID                                                                                                                    NUMBER(4)
+
+SQL> DESC GIRL;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ GID                                                                                                               NOT NULL NUMBER(4)
+ GNAME                                                                                                                      VARCHAR2(20)
+ DOB                                                                                                                        DATE
+ PHONE_NO                                                                                                                   NUMBER(10)
+
+SQL> DROP TABLE MAKEUP;
+
+Table dropped.
+
+SQL> CREATE TABLE MAKE_UP
+  2  (MID NUMBER(3) PRIMARY KEY,
+  3  MNAME VARCHAR(20),
+  4  PRICE NUMBER(3),
+  5  GIRL_ID NUMBER(4),
+  6  CONSTRAINT FK_GIRL_ID FOREIGN KEY(GIRL_ID) REFERENCES GIRL(GID);
+CONSTRAINT FK_GIRL_ID FOREIGN KEY(GIRL_ID) REFERENCES GIRL(GID)
+                                                              *
+ERROR at line 6:
+ORA-00907: missing right parenthesis 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  CREATE TABLE MAKE_UP
+  2  (MID NUMBER(3) PRIMARY KEY,
+  3  MNAME VARCHAR(20),
+  4  PRICE NUMBER(3),
+  5  GIRL_ID NUMBER(4),
+  6* FOREIGN KEY(GIRL_ID) REFERNCES GIRL(GID)
+SQL> /
+FOREIGN KEY(GIRL_ID) REFERNCES GIRL(GID)
+                     *
+ERROR at line 6:
+ORA-00905: missing keyword 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  CREATE TABLE MAKE_UP
+  2  (MID NUMBER(3) PRIMARY KEY,
+  3  MNAME VARCHAR(20),
+  4  PRICE NUMBER(3),
+  5  GIRL_ID NUMBER(4),
+  6* FOREIGN KEY(GIRL_ID) REFERENCES GIRL(GID)
+SQL> /
+FOREIGN KEY(GIRL_ID) REFERENCES GIRL(GID)
+                                        *
+ERROR at line 6:
+ORA-00907: missing right parenthesis 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  CREATE TABLE MAKE_UP
+  2  (MID NUMBER(3) PRIMARY KEY,
+  3  MNAME VARCHAR(20),
+  4  PRICE NUMBER(3),
+  5  GIRL_ID NUMBER(4),
+  6  FOREIGN KEY(GIRL_ID) REFERENCES GIRL(GID)
+  7* )
+SQL> /
+
+Table created.
+
+SQL> DESC MAKE_UP;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MID                                                                                                               NOT NULL NUMBER(3)
+ MNAME                                                                                                                      VARCHAR2(20)
+ PRICE                                                                                                                      NUMBER(3)
+ GIRL_ID                                                                                                                    NUMBER(4)
+
+SQL> SELECT *
+  2  FROM (SELECT SAL,ROWNUM AS SRNO
+  3  FROM EMP);
+
+       SAL       SRNO                                                                                                                                                                                   
+---------- ----------                                                                                                                                                                                   
+       800          1                                                                                                                                                                                   
+      1600          2                                                                                                                                                                                   
+      1250          3                                                                                                                                                                                   
+      2975          4                                                                                                                                                                                   
+      1250          5                                                                                                                                                                                   
+      2850          6                                                                                                                                                                                   
+      2450          7                                                                                                                                                                                   
+      3000          8                                                                                                                                                                                   
+      5000          9                                                                                                                                                                                   
+      1500         10                                                                                                                                                                                   
+      1100         11                                                                                                                                                                                   
+       950         12                                                                                                                                                                                   
+      3000         13                                                                                                                                                                                   
+      1300         14                                                                                                                                                                                   
+
+14 rows selected.
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  SELECT *
+  2  FROM (SELECT SAL,ROWNUM AS SRNO
+  3  FROM EMP)
+  4* WHERE SRNO=13
+SQL> /
+
+       SAL       SRNO                                                                                                                                                                                   
+---------- ----------                                                                                                                                                                                   
+      3000         13                                                                                                                                                                                   
+
+SQL> SELCT SAL
+SP2-0042: unknown command "SELCT SAL" - rest of line ignored.
+SQL> FROM EMP
+SP2-0042: unknown command "FROM EMP" - rest of line ignored.
+SQL> ---DML----
+SQL> DESC GIRL;
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ GID                                                                                                               NOT NULL NUMBER(4)
+ GNAME                                                                                                                      VARCHAR2(20)
+ DOB                                                                                                                        DATE
+ PHONE_NO                                                                                                                   NUMBER(10)
+
+SQL> INSERT INTO GIRL VALUES(1001,'UNDRI','14-FEB-15',9484378345);
+
+1 row created.
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1* INSERT INTO GIRL VALUES(1002,'PALAK','12-MARCH-27',9876543210)
+SQL> /
+
+1 row created.
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1* INSERT INTO GIRL VALUES(1003,'PRIYA','11-JAN-02',NULL)
+SQL> /
+
+1 row created.
+
+SQL> SELECT *
+  2  FROM GIRL;
+
+       GID GNAME                DOB         PHONE_NO                                                                                                                                                    
+---------- -------------------- --------- ----------                                                                                                                                                    
+      1001 UNDRI                14-FEB-15 9484378345                                                                                                                                                    
+      1002 PALAK                12-MAR-27 9876543210                                                                                                                                                    
+      1003 PRIYA                11-JAN-02                                                                                                                                                               
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1* INSERT INTO GIRL(GID,DOB) VALUES(1004,19-MAY-2005)
+SQL> /
+INSERT INTO GIRL(GID,DOB) VALUES(1004,19-MAY-2005)
+                                         *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1* INSERT INTO GIRL(GID,DOB) VALUES(1004,'19-MAY-2005')
+SQL> /
+
+1 row created.
+
+SQL> SELECT *
+  2  FROM EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                                                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                                                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                                                                   
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                                                                   
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                                                                   
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                                                                   
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                                                                   
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                                                                   
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                                                                   
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                                                                   
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                                                                   
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                                                                   
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                                                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                                                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                                                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                                                                                                   
+
+14 rows selected.
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  SELECT *
+  2* FROM GIRL
+SQL> /
+
+       GID GNAME                DOB         PHONE_NO                                                                                                                                                    
+---------- -------------------- --------- ----------                                                                                                                                                    
+      1001 UNDRI                14-FEB-15 9484378345                                                                                                                                                    
+      1002 PALAK                12-MAR-27 9876543210                                                                                                                                                    
+      1003 PRIYA                11-JAN-02                                                                                                                                                               
+      1004                      19-MAY-05                                                                                                                                                               
+
+SQL> UPDATE GIRL
+  2  SET GNAME='KARNI'
+  3  WHERE GID=1004;
+
+1 row updated.
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  DELETE FROM GIRL
+  2* WHERE GID=1002
+SQL> /
+
+1 row deleted.
+
+SQL> SELECT *
+  2  
+SQL> SELECT *
+  2  FROM GIRL;
+
+       GID GNAME                DOB         PHONE_NO                                                                                                                                                    
+---------- -------------------- --------- ----------                                                                                                                                                    
+      1001 UNDRI                14-FEB-15 9484378345                                                                                                                                                    
+      1003 PRIYA                11-JAN-02                                                                                                                                                               
+      1004 KARNI                19-MAY-05                                                                                                                                                               
+
+SQL> GRANT SELECT
+  2  ON GIRL
+  3  TO HR;
+
+Grant succeeded.
+
+SQL> CONN HR/SUNNY
+Connected.
+SQL> SELECT * FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID                                                                                                                                                       
+------------------------------ ------- ----------                                                                                                                                                       
+REGIONS                        TABLE                                                                                                                                                                    
+COUNTRIES                      TABLE                                                                                                                                                                    
+LOCATIONS                      TABLE                                                                                                                                                                    
+DEPARTMENTS                    TABLE                                                                                                                                                                    
+JOBS                           TABLE                                                                                                                                                                    
+EMPLOYEES                      TABLE                                                                                                                                                                    
+JOB_HISTORY                    TABLE                                                                                                                                                                    
+EMP_DETAILS_VIEW               VIEW                                                                                                                                                                     
+
+8 rows selected.
+
+SQL> SELECT *
+  2  FROM GIRL;
+FROM GIRL
+     *
+ERROR at line 2:
+ORA-00942: table or view does not exist 
+
+
+SQL> SELECT *
+  2  FROM SCOTT.GIRL;
+
+       GID GNAME                DOB         PHONE_NO                                                                                                                                                    
+---------- -------------------- --------- ----------                                                                                                                                                    
+      1001 UNDRI                14-FEB-15 9484378345                                                                                                                                                    
+      1003 PRIYA                11-JAN-02                                                                                                                                                               
+      1004 KARNI                19-MAY-05                                                                                                                                                               
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  SELECT *
+  2  FROM SCOTT.GIRL
+  3* WHERE GID=1001
+SQL> /
+
+       GID GNAME                DOB         PHONE_NO                                                                                                                                                    
+---------- -------------------- --------- ----------                                                                                                                                                    
+      1001 UNDRI                14-FEB-15 9484378345                                                                                                                                                    
+
+SQL> CONN SCOTT
+Connected.
+SQL>  REVOKE SELECT
+  2  ON GIRL
+  3  FROM HR;
+
+Revoke succeeded.
+
+SQL> CONN HR
+ERROR:
+ORA-01017: invalid username/password; logon denied 
+
+
+Warning: You are no longer connected to ORACLE.
+SQL> CONN HR/SUNNY
+Connected.
+SQL> SPOOL OFF;

@@ -1,5 +1,8 @@
 package com.jsp.entity;
 
+import java.util.List;
+
+import javax.management.Query;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -41,12 +44,44 @@ public class StudentDao {
 		}
 		else {
 			throw new StudentNotFoundException("Student with rol number not register");
-		}
-		
-		
+		}	
 	}
 	
+	public void findAll() {
+		
+		EntityManager entityManager=entityManagerFactory.createEntityManager();
+//		//Positioned parameter
+//		String q="select s from Student s where s.id=?1 or s.name=?2";
+//		
+//		javax.persistence.Query query=entityManager.createQuery(q);
+//		query.setParameter(1,12);
+//		query.setParameter(2,"Prince");
+		
+		
+		//named parameter
+        String q1="select s from Student s where s.id=:id or s.name=:name";
+		
+		javax.persistence.Query query1=entityManager.createQuery(q1);
+		query1.setParameter("id",7);
+		query1.setParameter("name","sincyyy");
+		
+//		List<Student> l=query.getResultList();
+		List<Student> l1=query1.getResultList();
+		System.out.println(l1);
+	}
 	
+	public void findParticulare() {
+		
+		EntityManager entityManager=entityManagerFactory.createEntityManager();
+		
+		String q="select s from Student s where s.id=15";
+		
+		javax.persistence.Query query=entityManager.createQuery(q);
+		
+		List<Student> l=query.getResultList();
+		
+		System.out.println(l);
+	}
 	
 	
 }

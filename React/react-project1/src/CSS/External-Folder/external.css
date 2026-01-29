@@ -1,0 +1,12 @@
+.exp1 { 
+  background-color: aqua;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+}
+#exp2 {
+    color: red;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid green;
+}
