@@ -23,6 +23,9 @@ import { Nav } from './CSS/MyntraTask/Nav'
 import ExternalCss from './CSS/External-Folder/ExternalCss';
 import Button from './CSS/ModuleBaseCSS/Button'
 import ControlForm1 from './ControlledAndUnControlled/ControlForm1'
+import ReactMemoParent from './Memoization/ReactMemo/ReactMemoParent'
+import { UseMemo } from './Memoization/useMemo/UseMemo'
+import UseCallBackParent from './Memoization/useCallback/UseCallBackParent'
 const App = () => {
 
   let  [toggle, setToggle] = useState(true)
@@ -61,8 +64,13 @@ const App = () => {
    {/* <Nav/> */}
    {/* <ExternalCss/>
    <Button/> */}
+{/* 
+   <ControlForm1/> */}
+{/* 
+   <ReactMemoParent/>
+   <UseMemo/> */}
 
-   <ControlForm1/>
+   <UseCallBackParent/>
     </div>
   )
 }

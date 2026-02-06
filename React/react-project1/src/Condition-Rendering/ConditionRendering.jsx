@@ -18,7 +18,6 @@ export const ConditionRendering = () => {
     else{
         return <h1>No Matching Data Found</h1>
     }
-
   return (
     <div>ConditionRendering</div>
   )

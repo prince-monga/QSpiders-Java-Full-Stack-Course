@@ -21,7 +21,7 @@ export default class Cbc extends Component {
       <div>
         <h1>{this.state.count}</h1>
         <button onClick={this.increment}>Inceement</button>
-           <button onClick={this.decrement}>Decrement</button>
+           <button onClick={this.decrement}>Decrement</button> 
               <button onClick={this.reset}>Reset</button>
       </div>
     )

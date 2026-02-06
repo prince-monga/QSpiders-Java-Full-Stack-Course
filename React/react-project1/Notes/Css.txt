@@ -1,0 +1,13 @@
+using the style attribute as a javaScript object.
+
+
+Internal CSS: It is defined inside the same file using the style tag in js.
+
+
+External CSS: It means defining css in a sperate.Css file and importing it into the compontent
+Module Based CSS: It is a CSS file in which all the class names and id names are scoped locally by default.
+                - it class genrated Unique gernerated Name
+
+
+
+Controlled and Uncontrolled compontent

@@ -16,6 +16,8 @@ export const InlineCSS = () => {
         {/* <h1 style={h1style}>
             Inline Css Example 2
         </h1> */}
+
+        
     </div>
   )
 }
