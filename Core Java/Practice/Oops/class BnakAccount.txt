@@ -1,0 +1,31 @@
+class BnakAccount
+{
+	private double bal;
+	private int pin;
+	long accNo;
+
+	BnakAccount(long accNo,int pin,double bal)
+	{
+		this.accNo=accNo;
+		this.pin=pin;
+		this.bal=bal;
+	}
+	
+	public void deposit(double amount)
+	{
+		this.bal+=amount;
+	}
+
+	public double getBalance()
+	{
+		return bal;
+	}
+	public void withDraw(double amount,int pin)
+	{
+		if(pin==this.pin)
+		{
+			if(
+		}
+	}
+
+}
