@@ -1,0 +1,48 @@
+#Varible:- Varible is like a container that are store the data (Value) in memory.
+
+
+
+Ques-1 Swap two Varible value using thrid Varible
+
+Solution- 
+a=10    
+b=20
+
+c=0;
+
+c=a;   #c=10
+a=b;   #a=20
+b=c;   #b=10
+
+{Swap Successfully}
+
+
+Ques-2 Swap two Varible value without using thrid Varible
+
+a=a+b;
+b=a-b;
+a=a-b;
+
+//Swap Successfully
+
+
+//Conditions
+1. if-else: 
+    It is use to Check Condition is statisfy or not if the Condition is statisfy then give true other wise else block exeucte.
+ 
+ ques 1: Check odd even number
+ int a=10;
+ if(a%2==0){
+        //Even number
+ }
+ else{
+    //odd Number
+ }
+
+ //-----Other logic-----
+ if(a%2==1){
+        //Odd number
+ }
+ else{
+    //Even Number
+ }
