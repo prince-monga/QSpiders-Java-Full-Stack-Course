@@ -1,4 +1,4 @@
-package Day1;
+package Day1.Assignment;
 
 public class CheckOddEven {
     public static void main(String[] args) {

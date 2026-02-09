@@ -1,4 +1,4 @@
-package Day1;
+package Day1.Assignment;
 
 class CheckNumIsPostiveOrNeg {
     public static void main(String[] args) {
