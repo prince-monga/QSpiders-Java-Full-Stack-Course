@@ -1,0 +1,11 @@
+Question 1- Desgin an app to read age of three siblings 
+            Ramu,raghu,and raju and store them in a varible.
+            The app when executed display age of the youngest sibling.
+
+Question 2-
+            Read marks and print grade:
+            >=90 -> A 
+            >=75 -> B
+            >=60 -> C
+            <=40 -> D 
+            <40  -> Fail

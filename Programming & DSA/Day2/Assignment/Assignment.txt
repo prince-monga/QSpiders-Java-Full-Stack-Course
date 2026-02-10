@@ -1,0 +1,40 @@
+ 
+ Design an app to read age of three siblings Ramu,
+    Raghu and Raju and store them in a variable. 
+    The app when executed  should display the age of the  youngest sibling. 
+
+
+/*
+  largest of 4 numbers 
+*/
+
+  Write a program that takes three inputs from the user and checks how many of these inputs are even. Depending on the number of even inputs, the program should perform different operations:
+    1. If only one input is even, the program should print that even number.
+    2. If two inputs are even, the program should print the sum of the two even numbers.
+    3. If all three inputs are even, the program should print the product of all three numbers.
+    4. If no input is even, the program should print 0.
+
+
+
+2. 
+A school follows a day wise time table for its students to play a specific  game
+TIME TABLE  
+Monday: Basket Ball 
+Tuesday: Tennis 
+Wednesday: Basket Ball
+Thursday: Cricket
+Friday: Tennis
+Saturday: Exercise 
+Sunday: Holiday 
+Design a simple application which can read the day of the week and suggest to the student which game he is supposed to play today by following the prescribed timetable designed by the school.
+
+
+For an Ecommerce application we need to write a logic to calculate the total price of the purchase after applying the discount.The discount are as follows,
+If the customer is a teenager, flat discount 5%. If the total purchase price is above 5000 after the flat discount customer gets additional 5% discount.
+If the customer is in 20's flat discount 6%. If the total purchase price is above 4000 after the flat discount customer gets additional 6% discount.
+If the customer is aged above 29 flat discount 15%. 
+Assume the age and total purchase price is given as input.
+Write a program to calculate the total price of purchase after discount and display, 
+total price before discount,total price after discount,discounted amount if any.
+
+------>------
