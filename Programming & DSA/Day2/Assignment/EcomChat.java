@@ -45,14 +45,15 @@ public class EcomChat {
 
         } else {
             System.out.println("Not Eligible for Discount");
-            return;
         }
 
         finalPrice = amount - flatDiscount - additionalDiscount;
         double totalDiscount = flatDiscount + additionalDiscount;
 
         System.out.println("\nTotal Price Before Discount: " + amount);
+
         System.out.println("Total Discount Amount: " + totalDiscount);
         System.out.println("Total Price After Discount: " + finalPrice);
+        sc.close();
     }
 }
