@@ -22,6 +22,6 @@ public class YoungestSibling {
         } else {
             System.out.println(name3 + " is the youngest sibling.");
         }
-
+        sc.close();
     }
 }

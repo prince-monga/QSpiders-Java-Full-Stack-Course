@@ -10,7 +10,6 @@ public class ElectricityBillUsingFunction {
         } else {
             total_amount = unit * 6;
         }
-
         if (total_amount > 2000) {
             total_amount = total_amount +
                     (total_amount * 0.1);
@@ -19,13 +18,9 @@ public class ElectricityBillUsingFunction {
             return total_amount;
         }
     }
-
     public static void main(String[] args) {
-
         System.out.println("Total bill:" + electricityBill(90));
         System.out.println("Total bill:" + electricityBill(150));
         System.out.println("Total bill:" + electricityBill(500));
-
     }
-
 }

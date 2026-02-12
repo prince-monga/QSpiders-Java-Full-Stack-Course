@@ -35,6 +35,6 @@ public class Ecommerce {
         } else {
             System.out.println("Not Eligible");
         }
-
+        sc.close();
     }
 }
