@@ -13,7 +13,7 @@ It includes backend, frontend, and database technologies required to become a fu
 - Web Technologies (HTML, CSS, JavaScript)  
 - React.js  
 - Git & GitHub  
-
+-Spring & Spring Boot
 ---
 
 ## 📁 Folder Structure
@@ -21,7 +21,10 @@ It includes backend, frontend, and database technologies required to become a fu
 - 📂 **[Core Java](./Core%20Java)**  
 - 📂 **[SQL](./SQL)**  
 - 📂 **[Web Tech](./Web%20Tech)**  
-- 📂 **[React](./React)**  
+- 📂 **[React](./React)**
+- 📂 **[Programming & DSA](./Programming%20%26%20DSA)**
+- 📂 **[Spring](./Spring)**
+- 📂 **[Spring Boot](./Spring%20Boot)**
 - 📄 **README.md**
 
 ---
@@ -58,4 +61,5 @@ I am a Java Full Stack learner at **JSpiders**, working towards becoming a profe
 ## 📌 Note
 
 This repository is regularly updated as I continue learning and building new projects.
+
 
