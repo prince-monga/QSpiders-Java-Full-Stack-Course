@@ -1,0 +1,19 @@
+Given Questions
+
+-Find the sum of all digits in a given number   --Done
+
+-Find the product of all digits in a given number   --Done
+
+-Find the factorial of all digits in a given number   --Done
+
+-Find the sum of all even digits in a given number 
+
+-Check whether zero is present in number or not (Duck number)
+
+-Check number starts with odd digit or even digit
+
+-Check number ends with odd digit or even digit
+
+-Check number starts with 5 or 3
+
+-Check number contains 7 or divisible by 7

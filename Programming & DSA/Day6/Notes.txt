@@ -1,0 +1,35 @@
+----For Loop---
+
+Syntax ->
+        for(initialize, condition, updation){
+            //Statement
+        }
+
+        working-----  
+        first initialize value ->  check condition ---{
+            if(true condition)--->
+                Statement print
+
+            --And goes to increenment part --
+                increenment value after again check condition--
+                if true condition - updation and repate steps 
+
+        if condition(false)--> exit the loop
+        }
+
+
+--------------------------------------------
+
+Q1: Print number 1 to 5 using for loop
+
+Q2: Print number 5 to 1 using for loop
+
+Q3: Sum of all natural number
+
+Q4: Find the factorial of a number
+
+
+----------------------------------------
+-Time & Space  complexcity
+
+

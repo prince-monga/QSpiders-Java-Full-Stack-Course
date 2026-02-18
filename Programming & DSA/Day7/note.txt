@@ -1,0 +1,7 @@
+Q1: Count number of factores
+
+Q2: Check number is prime or not ------(2,3,5,7,11 ....)
+    (the number is diviable by itself and 1 only )
+
+Q3: Find series of prime number ---->example ( 10 to 40) -how many numbers are prime numbers and print this
+                                     result->   11 13 17 19 23 29 31 37 

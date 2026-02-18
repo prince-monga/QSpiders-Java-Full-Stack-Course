@@ -1,0 +1,5 @@
+Q1: Factors/Divisor of the given number
+
+Q2: HCF or GCD if given number
+
+Q3: prime number
