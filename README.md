@@ -7,7 +7,7 @@ It contains structured learning materials, hands-on practice programs, assignmen
 
 ---
 
-## 📚 Technologies Covered
+##  Technologies Covered
 
 - Core Java  
 - Advanced Java (JDBC, basics of Servlets)  
@@ -33,7 +33,7 @@ It contains structured learning materials, hands-on practice programs, assignmen
 
 
 
-## 🎯 Purpose of This Repository
+##  Purpose of This Repository
 
 This repository is created to:
 - Store all my **Java Full Stack learning**
@@ -43,7 +43,7 @@ This repository is created to:
 
 ---
 
-## 💻 What You Will Find
+##  What You Will Find
 
 - Java programs (OOP, Collections, Multithreading, etc.)
 - SQL queries and database scripts
@@ -53,10 +53,10 @@ This repository is created to:
 
 ---
 
-## 🚀 About Me
+##  About Me
 I am a Java Full Stack learner at **JSpiders**, working towards becoming a professional software developer with strong backend and frontend skills.
 ---
-## 📌 Note
+##  Note
 
 This repository is regularly updated as I continue learning and building new projects.
 
@@ -70,6 +70,7 @@ This repository is regularly updated as I continue learning and building new pro
 Let’s build something amazing 🚀
 
 </div>
+
 
 
 
