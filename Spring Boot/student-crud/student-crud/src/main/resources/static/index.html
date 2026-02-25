@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student CRUD API</title>
+</head>
+<body>
+<h1>Student Management API</h1>
+<p>Available endpoints:</p>
+<ul>
+    <li>POST /savethis - Save a student (send JSON in body)</li>
+</ul>
+
+<h2>Test Form</h2>
+<form id="studentForm">
+    <input type="number" placeholder="Roll Number" id="rol" required><br>
+    <input type="text" placeholder="Name" id="name" required><br>
+    <input type="tel" placeholder="Phone" id="phone" required><br>
+    <input type="email" placeholder="Email" id="email" required><br>
+    <button type="submit">Save Student</button>
+</form>
+
+<script>
+    document.getElementById('studentForm').onsubmit = async (e) => {
+        e.preventDefault();
+        const student = {
+            rol: parseInt(document.getElementById('rol').value),
+            name: document.getElementById('name').value,
+            phone: parseInt(document.getElementById('phone').value),
+            email: document.getElementById('email').value
+        };
+
+        const response = await fetch('/savethis', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(student)
+        });
+
+        const result = await response.json();
+        alert('Student saved: ' + JSON.stringify(result));
+    };
+</script>
+</body>
+</html>

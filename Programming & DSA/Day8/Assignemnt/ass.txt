@@ -1,0 +1,12 @@
+Q1: Arm Strong Number---> Some of the power of the all digit is equalls to the original number
+
+  153---->  = (1 cube + 5 cube + 3 cube)
+  1664----> = (1 pow(4)+ 6 pow(4)+ 6 pow(4)+ 4 pow(4)+ )
+
+Q2: Find exponential of given without inbuilt function
+
+    4^2 = 16
+    2^3=8
+    4^3=64
+
+

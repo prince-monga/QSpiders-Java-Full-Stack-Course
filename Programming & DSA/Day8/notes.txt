@@ -1,0 +1,63 @@
+Q1: find Fibonnic Seires
+
+Like:- 0,1,1,2,3,5,8,13,21,........
+It is addtion of pervioues two numbers for example:
+        n1=0,n2=1;
+        0+1=1---now n3=1
+
+        n1=1,n2=1;
+        1+1=2----next number
+
+
+Logic-----
+        Take n1=0,n2=1;---->Starting
+        Using for/while loop for find specific number of Seires
+
+        -----print----- n1 ----->it run very iteration before performing main logic 
+        take n3 and and add n1+n2
+
+        mofify n1,n2-because repeated task perfrom
+
+        n1=n2;
+        n2=n3;
+
+
+
+Q2: kth Fibonnic Seires
+   same as Fibonnici  but loop run only kth----
+---   i to k 
+
+Q3: Strong Number
+    It is a number that individual factorial sum equalls to original number take take as input.
+
+     for example->  num=145
+     fact 1-->1
+     fact 4-->24
+     fact 5-->120
+
+     add all fact--> 1+24+120=145
+
+     Now see this 145 == addallfact(  145  )  is equalls  then it is strong number
+
+
+     Logic--> n=145
+        while(n>0){ -----It runs three time because 3 digit number
+
+            
+            digit =n%10;  -------It gives the last Digit - 5
+
+            int fact=1;
+
+            for(int i=1;i<=digit;i++){             ---(int i=1;i<=5;i++)--- it iteration 5 times 
+                fact*=i;                            1*=1->1,  1*=2->2, 2*=3->6,  6*4->24,  24*5->120;                              
+            }                               
+                                                 ---(int i=1;i<=4;i++)--- it iteration 4 times 
+                                                    1*=1->1,  1*=2->2, 2*=3->6,  6*4->24
+
+                                                    ---(int i=1;i<=1;i++)--- it iteration 1 times 
+                                                      1*=1->1, 
+
+            sum+=fact;    0+120, 120+24, 144+1;
+
+            n=n/10; ------It removes the last digit give  14 
+        }
