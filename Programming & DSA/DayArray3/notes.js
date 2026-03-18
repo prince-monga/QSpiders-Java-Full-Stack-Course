@@ -42,4 +42,7 @@
 // 4) if yes, add to result array
 // 5) repeat for all elements
 
-
+//~ Assinment Questions
+//^ Q1: z water -->
+//^ Q2: move zeros to end -->
+//^ Q3: sort 0,1,2 without using sorting. -->
