@@ -21,7 +21,7 @@ public class AnagramWthoutInbuilt {
         String s2 = "silent";
         String s3 = sorts(s1);
         String s4 = sorts(s2);
-        if (s3.equals(s4)) {
+        if (s3.equalsIgnoreCase(s4)) {
             System.out.println("Anagram");
         } else {
             System.out.println("Not an Anagram");
